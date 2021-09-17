@@ -340,6 +340,8 @@ def call(Map paramsMap) {
 
         stages {
             stage('SETUP') {
+
+                stages {
                     stage('SETUP: Workflow Step Runner') {
                         environment {
                             GIT_SSL_NO_VERIFY               = "${params.stepRunnerLibSourceGitTLSNoVerify}"
@@ -443,6 +445,7 @@ def call(Map paramsMap) {
                             }
                         }
                     }
+                } //STAGES
             } // SETUP
             stage('Continuous Integration') {
                 stages {
