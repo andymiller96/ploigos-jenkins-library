@@ -363,7 +363,9 @@ def call(Map paramsMap) {
                                      *  That is why all the params are specified as environment
                                      *  variables to make them accessable to this script.
                                      */
-
+                                    printenv
+                                    echo "Your mom goes to college"
+                                    sh 'echo your mom goes to college'
                                     sh '''
                                         #!/bin/sh
                                         if [ "${VERBOSE}" == "true" ]; then set -x; else set +x; fi
